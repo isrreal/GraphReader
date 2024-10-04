@@ -8,9 +8,8 @@
 
 struct Vertex {
     int identificator;
-    char color;
     std::list<Vertex*> adjacencies;
-    Vertex(int identificator, char color = ' '): identificator(identificator), color(color) {}
+    Vertex(int identificator): identificator(identificator) {}
     ~Vertex() {}
 
     friend std::ostream& operator<<(std::ostream& os, const Vertex& vertex) {
